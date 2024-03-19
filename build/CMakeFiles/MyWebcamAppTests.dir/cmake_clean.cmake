@@ -1,13 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/MyWebcamAppTests.dir/src/FaceDetector.cpp.obj"
-  "CMakeFiles/MyWebcamAppTests.dir/src/FaceDetector.cpp.obj.d"
-  "CMakeFiles/MyWebcamAppTests.dir/tests/test_main.cpp.obj"
-  "CMakeFiles/MyWebcamAppTests.dir/tests/test_main.cpp.obj.d"
-  "MyWebcamAppTests.exe"
-  "MyWebcamAppTests.exe.manifest"
+  "CMakeFiles/MyWebcamAppTests.dir/src/FaceDetector.cpp.o"
+  "CMakeFiles/MyWebcamAppTests.dir/src/FaceDetector.cpp.o.d"
+  "CMakeFiles/MyWebcamAppTests.dir/tests/test_main.cpp.o"
+  "CMakeFiles/MyWebcamAppTests.dir/tests/test_main.cpp.o.d"
+  "MyWebcamAppTests"
   "MyWebcamAppTests.pdb"
   "MyWebcamAppTests[1]_tests.cmake"
-  "libMyWebcamAppTests.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

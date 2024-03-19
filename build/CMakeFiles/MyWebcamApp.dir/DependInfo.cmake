@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/arnon/source/repos/cpp_test_app/src/FaceDetector.cpp" "CMakeFiles/MyWebcamApp.dir/src/FaceDetector.cpp.obj" "gcc" "CMakeFiles/MyWebcamApp.dir/src/FaceDetector.cpp.obj.d"
-  "C:/Users/arnon/source/repos/cpp_test_app/src/main.cpp" "CMakeFiles/MyWebcamApp.dir/src/main.cpp.obj" "gcc" "CMakeFiles/MyWebcamApp.dir/src/main.cpp.obj.d"
+  "/home/arnon/code/cpp_test_app/src/FaceDetector.cpp" "CMakeFiles/MyWebcamApp.dir/src/FaceDetector.cpp.o" "gcc" "CMakeFiles/MyWebcamApp.dir/src/FaceDetector.cpp.o.d"
+  "/home/arnon/code/cpp_test_app/src/main.cpp" "CMakeFiles/MyWebcamApp.dir/src/main.cpp.o" "gcc" "CMakeFiles/MyWebcamApp.dir/src/main.cpp.o.d"
   )
 
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

@@ -1,5 +1,7 @@
-#include <gtest/gtest.h>
+
 #include <iostream>
+#include <opencv2/opencv.hpp>
+#include <gtest/gtest.h>
 #include <FaceDetector.h>
 
 FaceDetector face_detector;
@@ -11,7 +13,9 @@ TEST(CameraTest, InitializeCamera) {
 
 // Test the face detection functionality (mocked)
 TEST(FaceDetectionTest, DetectFace) {
-    ASSERT_TRUE(face_detector.detect_face()); // Assuming face is always detected for this mock
+    //blank frame
+    cv::Mat frame = cv::Mat::zeros(640, 480, CV_8UC3); 
+    ASSERT_TRUE(face_detector.detect_face(frame).x == 0); // Assuming face is never detected for this mock
 }
 
 

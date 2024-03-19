@@ -1,1 +1,0 @@
--IC:/Users/arnon/source/repos/cpp_test_app/include -I"C:/code/OpenCV-MinGW-Build/x64/mingw/bin" -IC:/code/gtest/mingw64/include -isystem "C:/code/OpenCV-MinGW-Build/include"
