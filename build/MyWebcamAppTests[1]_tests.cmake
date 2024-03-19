@@ -1,0 +1,5 @@
+add_test([=[CameraTest.InitializeCamera]=]  C:/Users/arnon/source/repos/cpp_test_app/build/MyWebcamAppTests.exe [==[--gtest_filter=CameraTest.InitializeCamera]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[CameraTest.InitializeCamera]=]  PROPERTIES WORKING_DIRECTORY C:/Users/arnon/source/repos/cpp_test_app/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[FaceDetectionTest.DetectFace]=]  C:/Users/arnon/source/repos/cpp_test_app/build/MyWebcamAppTests.exe [==[--gtest_filter=FaceDetectionTest.DetectFace]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[FaceDetectionTest.DetectFace]=]  PROPERTIES WORKING_DIRECTORY C:/Users/arnon/source/repos/cpp_test_app/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  MyWebcamAppTests_TESTS CameraTest.InitializeCamera FaceDetectionTest.DetectFace)

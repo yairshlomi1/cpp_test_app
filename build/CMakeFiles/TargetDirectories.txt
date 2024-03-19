@@ -1,0 +1,5 @@
+C:/Users/arnon/source/repos/cpp_test_app/build/CMakeFiles/MyWebcamApp.dir
+C:/Users/arnon/source/repos/cpp_test_app/build/CMakeFiles/MyWebcamAppTests.dir
+C:/Users/arnon/source/repos/cpp_test_app/build/CMakeFiles/test.dir
+C:/Users/arnon/source/repos/cpp_test_app/build/CMakeFiles/edit_cache.dir
+C:/Users/arnon/source/repos/cpp_test_app/build/CMakeFiles/rebuild_cache.dir
