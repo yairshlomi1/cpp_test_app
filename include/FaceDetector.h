@@ -12,15 +12,21 @@ private:
     cv::Mat frame;
     cv::VideoCapture cap;
     cv::CascadeClassifier face_cascade;
+    std::string cascade_file_path;
+    std::string executable_file_path;
+    std::string cascade_file_suffix;
+    bool found_cascade_file = false;
+
 
 public:
     FaceDetector();
     ~FaceDetector();
 
 
-    bool initialize_camera();
-    cv::Rect2i detect_face(cv::Mat frame);
-    cv::Mat get_frame();
+    bool initializeCamera();
+    bool CascadeFileFound();
+    cv::Rect2i detectFace(cv::Mat frame);
+    cv::Mat getFrame();
 };
 
 #endif // FACE_DETECTOR_H

@@ -8,19 +8,20 @@ FaceDetector face_detector;
 
 int main()
 {
-    if (!face_detector.initialize_camera())
+    if (!face_detector.initializeCamera())
     {
         std::cerr << "Camera initialization failed!\n";
         return 1;
     }
-    while (true){
-        cv::Mat frame = face_detector.get_frame();
-        //resize keep the aspect ratio
+    while (true and face_detector.CascadeFileFound())
+    {
+        cv::Mat frame = face_detector.getFrame();
+        // resize keep the aspect ratio
         double scale = 640.0 / frame.cols;
         cv::resize(frame, frame, cv::Size(640, frame.rows * scale));
         cv::flip(frame, frame, 1);
 
-        cv::Rect2i r = face_detector.detect_face(frame);
+        cv::Rect2i r = face_detector.detectFace(frame);
         if (r.width > 0 && r.height > 0)
         {
             cv::rectangle(frame, r, cv::Scalar(0, 255, 0), 2);
@@ -32,7 +33,6 @@ int main()
             break;
         }
     }
-    
 
     return 0;
 }
