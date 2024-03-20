@@ -1,4 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
+set(CMAKE_CXX_COMPILER /usr/bin/g++)
+set(CMAKE_C_COMPILER /usr/bin/gcc)
+
 project(MyWebcamApp)
 
 # Specify the C++ standard
