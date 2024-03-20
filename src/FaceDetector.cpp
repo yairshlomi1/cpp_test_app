@@ -4,12 +4,9 @@
 #include <opencv2/objdetect.hpp>
 #include <opencv2/opencv.hpp>
 
-#include <iostream>
-#include <unistd.h>
-
 FaceDetector::FaceDetector()
 {
-    cascade_file_suffix = "haarcascades/haarcascade_frontalface_alt.xml";
+    cascade_file_suffix = "/haarcascades/haarcascade_frontalface_alt.xml";
     char buffer[PATH_MAX];
     ssize_t len = readlink("/proc/self/exe", buffer, sizeof(buffer) - 1);
     if (len != -1)
@@ -20,17 +17,23 @@ FaceDetector::FaceDetector()
 
         std::string::size_type pos = path.find_last_of("/");
         std::string folder_path = path.substr(0, pos);
-        std::cout << "Executable folder path: " << folder_path << std::endl;
-        found_cascade_file = true;
+        // std::cout << "Executable folder path: " << folder_path << std::endl;
         size_t last_slash_pos = folder_path.find_last_of('/');
         if (last_slash_pos != std::string::npos)
         {
             path_prefix = folder_path.substr(0, last_slash_pos);
-            std::cout << "Project folder path: " << path_prefix << std::endl;
-            cascade_file_path = path_prefix + "/" +  cascade_file_suffix;
-            std::cout << "cascade file path: " << cascade_file_path << std::endl;
-
-
+            // std::cout << "Project folder path: " << path_prefix << std::endl;
+            cascade_file_path = path_prefix + cascade_file_suffix;
+            // std::cout << "cascade file path: " << cascade_file_path << std::endl;
+            if (std::filesystem::exists(cascade_file_path))
+            {
+                found_cascade_file = true;
+            }
+            else
+            {
+                std::cout << "could not find cascade file" << std::endl;
+                found_cascade_file = false;
+            }
         }
         else
         {

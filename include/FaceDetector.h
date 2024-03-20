@@ -6,6 +6,10 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/mat.hpp>
 
+#include <iostream>
+#include <unistd.h>
+#include <filesystem>
+
 class FaceDetector
 {
 private:
@@ -13,7 +17,6 @@ private:
     cv::VideoCapture cap;
     cv::CascadeClassifier face_cascade;
     std::string cascade_file_path;
-    std::string executable_file_path;
     std::string cascade_file_suffix;
     bool found_cascade_file = false;
 
