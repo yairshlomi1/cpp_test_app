@@ -54,7 +54,14 @@ FaceDetector::~FaceDetector()
 
 bool FaceDetector::initializeCamera()
 {
-    cap.open(0);
+    if (const char *env_p = std::getenv("TEST_VIDEO_PATH"))
+    {
+        cap.open(env_p);
+    }
+    else
+    {
+        cap.open(0);
+    }
     if (!cap.isOpened())
     {
         std::cerr << "Error opening video stream or file" << std::endl;
